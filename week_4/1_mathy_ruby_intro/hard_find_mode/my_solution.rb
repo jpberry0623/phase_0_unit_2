@@ -15,10 +15,19 @@
 
 # 2. Initial Solution
 
+def mode(array)
+array.each do|x| array.count(x) > 1}
+end
+
 
 
 
 # 3. Refactored Solution
+
+def mode(array)
+array.select{|x| array.count(x) > 1}.uniq
+
+end
 
 
 
