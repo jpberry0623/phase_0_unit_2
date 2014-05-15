@@ -50,16 +50,17 @@ end
 
 # Person 4
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  p source.delete_if {|thing_to_modify| thing_to_modify.to_s.include? (thing_to_delete)}
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  p source.delete_if {|thing_to_modify| thing_to_modify.to_s.include? (thing_to_delete)}
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
+#I chose to use the delete_if method.  it takes the item you identify in the code block, deletes it from your 
+# data structure, and returns the new values.  I had also thought about using reject, but that 
+# method does not change the array and will return nil.
 #
 
 
@@ -79,7 +80,7 @@ p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie
 
 # Reflect!
 # 
-# 
-# 
-# 
+# THis challenge was fairly intuitive. It just took me some time to research the various methods I could use for 
+# for data structures.  After I found the one that worked, the code came pretty quickly.  I will go through the 
+# other solutions of cohort members to see what other methods I may have been able to use to accomplish the challenge.
 # 
