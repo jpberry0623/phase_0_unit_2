@@ -58,7 +58,7 @@ end
 # Randomly returns an elements of an array upon which the method is called
 
 # 5. Are there any other methods you want to understand better?
-# no
+# I still need a better understanding of the zip method, but other methods in the code make sense.
 
 # 6. Does this code look better or worse than your refactored solution
 #    of the original cipher code? What's better? What's worse?
