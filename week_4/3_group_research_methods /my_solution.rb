@@ -6,11 +6,15 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  source.grep(/#{thing_to_find}/)
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  age_match = []
+  	source.each do |key, value|
+  		age_match << key if value == thing_to_find
+  	end
+  	age_match
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -20,11 +24,18 @@ end
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+  source.map! do |x|
+  		if x.is_a?(Integer) 
+  			x + thing_to_modify
+  		else
+  			x
+  		end
+  	end
 end
 
 def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+  source.each do |name, age|
+		source[name] += thing_to_modify
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -35,11 +46,11 @@ end
 
 # Person 3
 def my_array_sorting_method(source)
-  # Your code here!
+  source.map { |value| value.to_s }.sort_by{|value| value}
 end
 
 def my_hash_sorting_method(source)
-  # Your code here!
+  source.sort_by{ |key,value| [value , key]}
 end
 
 # Identify and describe the ruby method you implemented. 
