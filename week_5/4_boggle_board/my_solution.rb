@@ -1,6 +1,6 @@
 # U2.W5: A Nested Array to Model a Boggle Board
 
-# I worked on this challenge [by myself.
+# I worked on this challenge [by myself]
 
 boggle_board = [["b", "r", "a", "e"],
                 ["i", "o", "d", "t"],
@@ -61,6 +61,11 @@ end
 
 # Refactored Solution
 
+def get_row(row) # this could be done if the original boggle board was declared a global variable
+ 
+    $boggle_board[row]
+end
+
 
 # DRIVER TESTS GO BELOW THIS LINE
 
@@ -95,8 +100,20 @@ p get_col(1)  #=>  ["r", "o", "c", "a"]
 
 # Refactored Solution
 
+def get_col(col)
+    
+  $boggle_board.transpose[1] # this could be done if the original boggle board was declared a global variable
+end
 
 # DRIVER TESTS GO BELOW THIS LINE
 p get_col(1)  #=>  ["r", "o", "c", "a"]
 
 # Reflection 
+
+# The solution again here was fairly intuitive, but refactoring is always much harder for me because I only know enough ruby to solve
+# the problem at hand and usually have to search around for better solutions for refactoring, but I guess thats how I will learn!
+# I came up with using a global variable instance so I did not need to redefine the boggle board in each method definition, but in
+# some of my research it appears that declaring global variable has some pretty big downsides once you start considering bigger
+# picture problems when designing web apps (i.e http://stackoverflow.com/questions/5927479/why-no-one-use-global-dollar-sign-variable).
+# this leads me to believe that my refactored code is perhaps not the best solution, but it does create more concise, DRY code as far 
+# as I can tell. I will keep digging for examples of when to use or not use global variables to come to a conclusion on this matter.
