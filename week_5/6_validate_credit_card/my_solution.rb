@@ -1,7 +1,7 @@
 # U2.W5: Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself]
 
 # 2. Pseudocode
 
@@ -63,7 +63,7 @@ class CreditCard
 end
 # 4. Refactored Solution
 
-#It took me a long time to get the syntax for this and I can't come up with
+#It took me a long time to get the syntax for this and I can't come up with cleaner code than my initial attempt.
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
