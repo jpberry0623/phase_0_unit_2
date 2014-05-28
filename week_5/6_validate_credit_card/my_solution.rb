@@ -68,9 +68,13 @@ end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-a = CreditCard.new(1234567891234567)
+#test fail
+fake_card = CreditCard.new(1234567891234567)
+p fake_card.check_card 
 
-p a.check_card 
+#test pass
+legit_card = CreditCard.new(4563960122001999)
+p legit_card.check_card
 
 
 
